@@ -18,7 +18,7 @@ import { EmployeeCredential } from '../employee-credentials/entities/employee-cr
     JwtModule.registerAsync({
       inject: [ConfigService],
       useFactory: (cfg: ConfigService) => ({
-        secret: cfg.get<string>('JWT_SECRET') || 'dev_fallback_change_me', // 👈 evita undefined
+        secret: cfg.get<string>('JWT_SECRET') || 'dev_fallback_change_me', // evita undefined
         signOptions: { expiresIn: cfg.get<string>('JWT_EXPIRES_IN') || '1h' },
       }),
     }),
