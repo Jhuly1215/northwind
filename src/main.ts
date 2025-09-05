@@ -24,7 +24,7 @@ async function bootstrap() {
       { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' },
       'access-token', // nombre del esquema (úsalo en @ApiBearerAuth)
     )
-    .addServer('http://localhost:3000', 'Local')
+    .addServer('https://northwind-hgwy-n38j38a5g-jhuly1215s-projects.vercel.app', 'Local')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
